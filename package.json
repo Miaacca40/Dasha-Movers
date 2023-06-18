@@ -1,0 +1,17 @@
+{
+  "name": "insurance-claims",
+  "version": "0.1.0",
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js 12765259825"
+  },
+  "devDependencies": {
+    "@dasha.ai/cli": ">=0.1.0",
+    "prettier": "^2.2.1"
+  },
+  "dependencies": {
+    "@dasha.ai/sdk": "^0.6.5",
+    "git": "^0.1.5"
+  }
+}

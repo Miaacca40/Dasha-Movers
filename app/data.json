@@ -1,0 +1,835 @@
+{
+  "version": "v2",
+  "intents": 
+  {
+    "yes": 
+    {
+      "includes": [
+        "yes",
+        "correct",
+        "sure",
+        "absolutely",
+        "yes siree bob",
+        "right",
+        "yep",
+        "you got it",
+        "I would",
+        "yeah",
+        "that's right", 
+        "I would",
+        "I do",
+        "you can",
+        "you may"
+      ],
+      "excludes": [
+        "fuck off"
+      ]
+    },
+    "no": {
+      "includes": [
+        "no",
+        "definitely not",
+        "wrong",
+        "incorrect",
+        "I do not",
+        "I don't",
+        "I would not",
+        "I wouldn't"
+      ],
+      "excludes": [
+        "no, I want a delivery",
+        "no, I want it delivered"
+      ]
+    },
+
+    "bye": {
+      "includes": [
+        "bye",
+        "good bye",
+        "thanks bye",
+        "nevermind",
+        "forget about it",
+        "we're done",
+        "take it easy",
+        "peace out boo",
+        "peace",
+		"hang up"
+      ]
+    },
+
+"what_services": {
+      "includes": [
+        "wondering what services do you offer",
+        "can you describe your services",
+        "explain your services to me",
+        "guide me about your services",
+        "give me the list of your services",
+        "provide me all the services you offer",
+        "can i have a look at your services",
+        "please provide the services that can be availed",
+        "list of services",
+		"give the services"
+      ]
+    },
+
+
+  "policy_check": {
+    "includes": [
+      "I'd like to check some details regarding my insurance policy ",
+      "Can I check my policy?",
+      "I want to check my policy",
+      "policy",
+      "check policy",
+      "can you check a policy"
+    ]
+  },
+
+  "how_are_you": {
+    "includes": [
+      "how are you?",
+      "How are you doing?",
+      "How is it going?"
+    ]
+  },
+
+  "accident_coverage": {
+    "includes": [
+      "Do I have accident coverage?",
+      "Accident coverage?",
+      "Is there accident coverage",
+      "do you cover accidents" 
+    ]
+  },
+
+  "claim_status": {
+    "includes": [
+      "What is the status of the claim?",
+      "What's my claim's status?",
+      "claim status",
+      "When will the claim be comleted?"
+    ]
+  },
+
+  "redeem_claim": {
+    "includes": [
+      "I'd like to redeem my claim",
+      "redeem",
+      "redeem claim"
+    ]
+  }
+
+
+
+},
+
+  "entities": 
+  {
+   
+    "movetype": 
+    {
+      "open_set": true,
+      "values": [
+        {
+          "value": "local",
+          "synonyms": ["Its local", "Hey Its local", "This is local Move", "Its Going to be local"]
+        },
+        {
+          "value": "interstate",
+          "synonyms": ["Its interstate", "uh it is interstate", "Yeah it is interstate", "Its going to be local"]
+        },
+        {
+          "value": "local",
+          "synonyms": ["local"]
+        },
+        {
+          "value": "interstate",
+          "synonyms": ["oh interstate"]
+        },
+        {
+          "value": "long distance",
+          "synonyms": ["Oh long distance"]
+        }
+      ],
+      "includes": [
+        "Yeah it is (local)[movetype]",
+		"It's (local)[movetype]",
+		"Yeah it's (local)[movetype]",
+		"It's (interstate)[movetype]",
+        "The move is (interstate)[movetype]",
+        "Oh the move is (local)[movetype]",
+        "i think the move is (local)[movetype]",
+        "yes the move is (interstate)[movetype]",
+        "the move might be (local)[movetype]",
+        "The Move is (interstate)[movetype]",
+        "This is (local)[movetype]",
+        "(local)[movetype] move",
+		"It's (long distance)[movetype] move",
+		"its gonna be (long distance)[movetype] move",
+        "(interstate)[movetype] move",
+        "(local)[movetype] it is ",
+        "(interstate)[movetype] it is actually",
+		"i need (local)[movetype]",
+		"i need a (long distance)[movetype]"
+		
+      ]
+    },
+	
+	"datemove": 
+    {
+      "open_set": true,
+      "values": [
+        {
+          "value": "23 June",
+          "synonyms": ["Date is 23 June", "June 23", "That might be 23 June", "Its June 23"]
+        },
+        {
+          "value": "24 May",
+          "synonyms": ["24th May", "Date is 24 th May", "Date will be 24 th may", "Date is 24th May"]
+        },
+        {
+          "value": "14 August",
+          "synonyms": ["14 August"]
+        },
+        {
+          "value": "August 23",
+          "synonyms": ["August 23"]
+        },
+        {
+          "value": "24 September",
+          "synonyms": ["oh it is 24 th september"]
+        },
+		{
+          "value": "week",
+          "synonyms": ["last week","current week","weekend"]
+        }
+      ],
+      "includes": [
+        "Date is (23 June)[datemove]",
+		"It's might be (23 June)[datemove]",
+		"Yeah it's (23 June)[datemove]",
+		"It's (14 August)[datemove]",
+        "The move is on  (15 July)[datemove]",
+        "Oh the move is on date (24 May)[datemove]",
+        "i think the move is on (24 May)[datemove]",
+        "yes the move is confirmed for (24 May)[datemove]",
+        "the move might be on (31st May)[datemove]",
+        "The Move is scheduled for (24 September)[datemove]",
+        "This is going to be (24 September)[datemove] later",
+		"that will be in next (week)[datemove]",
+		"in the same (week)[datemove]"
+      ]
+    },
+	
+	"origen": 
+    {
+      "open_set": true,
+      "values": [
+        {
+          "value": "Newyork",
+          "synonyms": ["Its Newyork", "Hey the city is newyork", "This is going to be newyork", "Its Going to be newyork"]
+        },
+        {
+          "value": "Los_Angles",
+          "synonyms": ["Its Los_Angles", "uh it is Los_Angles", "Yeah it is Los_Angles", "Its going to be Los_Angles"]
+        },
+        {
+          "value": "miami",
+          "synonyms": ["miami","Its miami", "uh it is miami", "Yeah it is miami", "Its going to be miami"]
+        },
+        {
+          "value": "Washington",
+          "synonyms": ["oh washington"]
+        },
+        {
+          "value": "Tampa",
+          "synonyms": ["Tampa"]
+        },
+		{
+    "value": "adjuntas",
+    "synonyms": [
+        "adjuntas",
+        "It's adjuntas",
+        "uh it is adjuntas",
+        "Yeah it is adjuntas",
+        "It's going to be adjuntas"
+    ]
+},{
+    "value": "aguada",
+    "synonyms": [
+        "aguada",
+        "It's aguada",
+        "uh it is aguada",
+        "Yeah it is aguada",
+        "It's going to be aguada"
+    ]
+},{
+    "value": "aguadilla",
+    "synonyms": [
+        "aguadilla",
+        "It's aguadilla",
+        "uh it is aguadilla",
+        "Yeah it is aguadilla",
+        "It's going to be aguadilla"
+    ]
+},{
+    "value": "aguadilla",
+    "synonyms": [
+        "aguadilla",
+        "It's aguadilla",
+        "uh it is aguadilla",
+        "Yeah it is aguadilla",
+        "It's going to be aguadilla"
+    ]
+},{
+    "value": "aguadilla",
+    "synonyms": [
+        "aguadilla",
+        "It's aguadilla",
+        "uh it is aguadilla",
+        "Yeah it is aguadilla",
+        "It's going to be aguadilla"
+    ]
+},{
+    "value": "aguadilla",
+    "synonyms": [
+        "aguadilla",
+        "It's aguadilla",
+        "uh it is aguadilla",
+        "Yeah it is aguadilla",
+        "It's going to be aguadilla"
+    ]
+},{
+    "value": "maricao",
+    "synonyms": [
+        "maricao",
+        "It's maricao",
+        "uh it is maricao",
+        "Yeah it is maricao",
+        "It's going to be maricao"
+    ]
+},{
+    "value": "anasco",
+    "synonyms": [
+        "anasco",
+        "It's anasco",
+        "uh it is anasco",
+        "Yeah it is anasco",
+        "It's going to be anasco"
+    ]
+},{
+    "value": "angeles",
+    "synonyms": [
+        "angeles",
+        "It's angeles",
+        "uh it is angeles",
+        "Yeah it is angeles",
+        "It's going to be angeles"
+    ]
+},{
+    "value": "arecibo",
+    "synonyms": [
+        "arecibo",
+        "It's arecibo",
+        "uh it is arecibo",
+        "Yeah it is arecibo",
+        "It's going to be arecibo"
+    ]
+},{
+    "value": "arecibo",
+    "synonyms": [
+        "arecibo",
+        "It's arecibo",
+        "uh it is arecibo",
+        "Yeah it is arecibo",
+        "It's going to be arecibo"
+    ]
+},{
+    "value": "arecibo",
+    "synonyms": [
+        "arecibo",
+        "It's arecibo",
+        "uh it is arecibo",
+        "Yeah it is arecibo",
+        "It's going to be arecibo"
+    ]
+},{
+    "value": "arecibo",
+    "synonyms": [
+        "arecibo",
+        "It's arecibo",
+        "uh it is arecibo",
+        "Yeah it is arecibo",
+        "It's going to be arecibo"
+    ]
+},{
+    "value": "bajadero",
+    "synonyms": [
+        "bajadero",
+        "It's bajadero",
+        "uh it is bajadero",
+        "Yeah it is bajadero",
+        "It's going to be bajadero"
+    ]
+},{
+    "value": "barceloneta",
+    "synonyms": [
+        "barceloneta",
+        "It's barceloneta",
+        "uh it is barceloneta",
+        "Yeah it is barceloneta",
+        "It's going to be barceloneta"
+    ]
+},{
+    "value": "boqueron",
+    "synonyms": [
+        "boqueron",
+        "It's boqueron",
+        "uh it is boqueron",
+        "Yeah it is boqueron",
+        "It's going to be boqueron"
+    ]
+},{
+    "value": "cabo rojo",
+    "synonyms": [
+        "cabo rojo",
+        "It's cabo rojo",
+        "uh it is cabo rojo",
+        "Yeah it is cabo rojo",
+        "It's going to be cabo rojo"
+    ]
+},{
+    "value": "penuelas",
+    "synonyms": [
+        "penuelas",
+        "It's penuelas",
+        "uh it is penuelas",
+        "Yeah it is penuelas",
+        "It's going to be penuelas"
+    ]
+},
+		{
+          "value": "1919 Tower Lane"
+        },
+        {
+          "value": "444 Main street"
+        },
+        {
+          "value": "1243 main street, apartment 7"
+        },
+        {
+          "value": "999 Elm road, apartment 2"
+        },
+        {
+          "value": "19 Rose street, office f"
+        },
+        {
+          "value": "75 green lane"
+        },
+        {
+          "value": "6632 Rosemary lane "
+        }
+		
+		
+      ],
+      "includes": [
+        "I am moving from (Newyork)[origen]",
+		"It's (Newyork)[origen]",
+		"Yeah it's (Newyork)[origen]",
+		"Sure the city i am planning to move is (Newyork)[origen]",
+        "The move is from (Los_Angles)[origen]",
+        "Oh the move is starting from (Tampa)[origen]",
+        "i am currently at (Washington)[origen]",
+        "my residence is in (Tampa)[origen] city",
+        "the move will be from (miami)[origen]",
+        "The Move is from (miami)[origen] city",
+        "(Tampa)[origen] city actually",
+		"(Washington)[origen]",
+		"(Tampa)[origen]",
+		"Its (Washington)[origen]",
+		"(6632 Rosemary lane)[origen]."
+      ]
+    },
+	
+	"destination": 
+    {
+      "open_set": true,
+      "values": [
+        {
+          "value": "Newyork",
+          "synonyms": ["Its Newyork", "Hey the city is newyork", "This is going to be newyork", "Its Going to be newyork"]
+        },
+        {
+          "value": "Los_Angles",
+          "synonyms": ["Its Los_Angles", "uh it is Los_Angles", "Yeah it is Los_Angles", "Its going to be Los_Angles"]
+        },
+        {
+          "value": "miami",
+          "synonyms": ["miami","Its miami", "uh it is miami", "Yeah it is miami", "Its going to be miami"]
+        },
+        {
+          "value": "Washington",
+          "synonyms": ["oh washington"]
+        },
+        {
+          "value": "Tampa",
+          "synonyms": ["Tampa"]
+        }
+      ],
+      "includes": [
+        "I am moving to (Newyork)[destination]",
+		"It's (Newyork)[destination]",
+		"Yeah it's (Newyork)[destination]",
+		"Sure the city i am planning to move is (Newyork)[destination]",
+        "The move is to (Los_Angles)[destination]",
+        "Oh the move is starting from (Tampa)[destination]",
+        "i am currently moving to (Washington)[destination]",
+        "my future residence is in (Tampa)[destination] city",
+        "the move will be to (miami)[destination]",
+        "The Move is to (miami)[destination] city",
+        "(Tampa)[destination] city actually",
+		"(Tampa)[destination].",
+		"(Washington)[destination] city "
+      ]
+    },
+	
+	
+	
+"name": 
+    {
+      "open_set": true,
+      "values": [
+        {
+          "value": "Doctor Smith",
+          "synonyms": ["Doc Smith", "Doctor Smith", "Smith, M.D.", "Smith MD"]
+        },
+        {
+          "value": "Doctor Philips",
+          "synonyms": ["Doc Philips", "Doctor Philips", "Philips, M.D.", "Philips MD"]
+        },
+        {
+          "value": "Jim Smith",
+          "synonyms": ["Jim Smith"]
+        },
+        {
+          "value": "Tony Montana",
+          "synonyms": ["Tony Montana"]
+        },
+		{
+          "value": "Marvin",
+          "synonyms": ["Marvin"]
+        },
+        {
+          "value": "Jill Jones",
+          "synonyms": ["Jill Jones"]
+        }
+      ],
+      "includes": [
+        "My name is (Doctor Smith)[name]",
+        "My name is (Tony Montana)[name]",
+        "My name is (Jill Jones)[name]",
+        "My name is (Jim Smith)[name]",
+        "This is (Doctor Philips)[name]",
+        "This is (Jill Jones)[name]",
+        "This is (Doctor Smith)[name]",
+        "This is (Jim Smith)[name]",
+        "(Doctor Jones)[name] calling",
+        "(Jim Smith)[name] calling",
+		"(Jim Smith)[name] here",
+		"This is (Jill Jones)[name]",
+		"name is (Doctor Smith)[name]",
+        "(Jill Jones)[name] calling",
+        "(Doctor Philips)[name] calling",
+		"My name is (Marvin)[name]",
+		"This is (Marvin)[name]",
+		"(Marvin)[name] speaking"
+      ]
+    },
+
+
+
+
+
+    "policy": 
+    {
+      "open_set": true,
+      "values": [
+        {
+          "value": "716542",
+          "synonyms": ["716542", "seven, one, six, five, four, two,", "seven one six five four two"]
+        },
+        {
+          "value": "2221337",
+          "synonyms": ["2221337", "two two two one three three seven", "two, two, two, one, three, three, seven."]
+        },
+        {
+          "value": "3348004",
+          "synonyms": ["3348004", "three three four eight zero zero four", "three, three, four, eight, oh, oh, four", "three, three, four, eight, zero, zero, four"]
+        },
+        {
+          "value": "86745309",
+          "synonyms": ["86745309", "eight six seven five three zero nine", "eight six seven five three oh nine"]
+        }
+      ],
+      "includes": [
+        "The policy number is (716542)[policy]",
+        "(716542)[policy]",
+        "The number is (716542)[policy]",
+        "The policy number is (86745309)[policy]",
+        "(86745309)[policy]",
+        "The number is (86745309)[policy]",
+        "The policy number is (3348004)[policy]",
+        "(3348004)[policy]",
+        "The number is (3348004)[policy]",
+        "The policy number is (2221337)[policy]",
+        "(2221337)[policy]",
+        "(73417)[policy]",
+        "(3348004)[policy]",
+        "(2221337)[policy]",
+        "The number is (2221337)[policy]",
+        "It's (2221337)[policy]",
+        "It's (3348004)[policy]",
+        "It's (86745309)[policy]"
+      ]
+    },
+
+    "zip_code": 
+    {
+      "open_set": true,
+      "values": [
+        {
+          "value": "00601",
+          "synonyms": ["double zero six zero one", "zero,zero,six,zero,one", "zero zero six zero one"]
+        },
+        {
+          "value": "02702",
+          "synonyms": ["Zero two seven zero two", "zero,two,seven,zero,two"]
+        },
+        {
+          "value": "99929",
+          "synonyms": ["triple nine two nine", "nine nine nine two nine", "nine, nine, nine, two,nine"]
+        },
+        {
+          "value": "99801",
+          "synonyms": ["Nine nine eight zero one", "nine,nine,eight,zero,one", "double nine eight zero one"]
+        }
+      ],
+      "includes": [
+        "The zip code is (00601)[zip_code]",
+        "(02702)[zip_code]",
+        "The number is (99929)[zip_code]",
+        "The policy number is (99801)[zip_code]",
+        "(02702)[zip_code]",
+        "The number is (00601)[zip_code]",
+        "The zip code is (00601)[zip_code]",
+        "(00601)[zip_code]",
+        "The code is (99801)[zip_code]",
+        "The zip code is (00601)[zip_code]",
+        "(00601)[zip_code]",
+        "(99929)[zip_code]",
+        "(999801)[zip_code]",
+        "(00601)[zip_code]",
+        "The number is (00601)[zip_code]",
+        "It's (00601)[zip_code]",
+        "It's (02702)[zip_code]",
+        "It's (99801)[zip_code]"
+      ]
+    },
+	
+	"phone_no": 
+    {
+      "open_set": true,
+      "values": [
+        {
+          "value": "2765259825",
+          "synonyms": ["two seven six five two five nine eight two five", "two,seven,six,five,two,five,nine,eight,two,five"]
+        },
+        {
+          "value": "9787129244",
+          "synonyms": ["nine seven eight seven one two nine two four four", "nine,seven,eight,seven,one,two,nine,two,four,four"]
+        },
+        {
+          "value": "3475711840",
+          "synonyms": ["three four seven five seven one one eight four zero", "three,four,seven,five,seven,one,one,eight,four,zero"]
+        },
+        {
+          "value": "3474840665",
+          "synonyms": ["three four seven four eight four zero six six five", "three,four,seven,four,eight,four,zero,six,six,five"]
+        }
+      ],
+      "includes": [
+        "The phone is (2765259825)[phone_no]",
+        "sure (2765259825)[phone_no]",
+        "The number is (2765259825)[phone_no]",
+        "my number is (3475711840)[phone_no]",
+        "(3475711840)[phone_no]",
+        "The number is (3475711840)[phone_no]",
+        "The cell no is (3475711840)[phone_no]",
+        "my cell is (3475711840)[phone_no]",
+        "The no is (3475711840)[phone_no]",
+        "The phone is (9787129244)[phone_no]",
+        "(9787129244)[phone_no]",
+        "(2765259825)[phone_no]",
+        "(3475711840)[phone_no]",
+        "(3475711840)[phone_no]",
+        "The number is (3475711840)[phone_no]",
+        "It's (3475711840)[phone_no]",
+        "It's (2765259825)[phone_no]",
+        "It's (9787129244)[phone_no]"
+      ]
+    },
+	
+	"phone_no2": 
+    {
+      "open_set": true,
+      "values": [
+        {
+          "value": "2765259825",
+          "synonyms": ["two seven six five two five nine eight two five", "two,seven,six,five,two,five,nine,eight,two,five"]
+        },
+        {
+          "value": "9787129244",
+          "synonyms": ["nine seven eight seven one two nine two four four", "nine,seven,eight,seven,one,two,nine,two,four,four"]
+        },
+        {
+          "value": "3475711840",
+          "synonyms": ["three four seven five seven one one eight four zero", "three,four,seven,five,seven,one,one,eight,four,zero"]
+        },
+        {
+          "value": "3474840665",
+          "synonyms": ["three four seven four eight four zero six six five", "three,four,seven,four,eight,four,zero,six,six,five"]
+        }
+      ],
+      "includes": [
+        "The phone is (2765259825)[phone_no2]",
+        "sure (2765259825)[phone_no2]",
+        "The number is (2765259825)[phone_no2]",
+        "my number is (3475711840)[phone_no2]",
+        "(3475711840)[phone_no2]",
+        "The number is (3475711840)[phone_no2]",
+        "The cell no is (3475711840)[phone_no2]",
+        "my cell is (3475711840)[phone_no2]",
+        "The no is (3475711840)[phone_no2]",
+        "The phone is (9787129244)[phone_no2]",
+        "(9787129244)[phone_no2]",
+        "(2765259825)[phone_no2]",
+        "(3475711840)[phone_no2]",
+        "(3475711840)[phone_no2]",
+        "The number is (3475711840)[phone_no2]",
+        "It's (3475711840)[phone_no2]",
+        "It's (2765259825)[phone_no2]",
+        "It's (9787129244)[phone_no2]"
+      ]
+    },
+	"email_info": 
+    {
+      "open_set": true,
+      "values": [
+        {
+          "value": "ibtirz@gmail.com",
+          "synonyms": ["ibtirz@gmail.com"]
+        },
+        {
+          "value": "ibtisam@primaxjm.com",
+          "synonyms": ["ibtisam@primaxjm.com"]
+        },
+        {
+          "value": "ibtisam@sharksolutions.info",
+          "synonyms": ["ibtisam@sharksolutions.info"]
+        },
+        {
+          "value": "miaacca40@gmail.com",
+          "synonyms": ["miaacca40@gmail.com"]
+        }
+      ],
+      "includes": [
+        "Sure the email is  (ibtirz@gmail.com)[email_info]",
+        "sure it is (ibtisam@primaxjm.com)[email_info]",
+        "The email is (ibtisam@sharksolutions.info)[email_info]",
+        "my email is (miaacca40@gmail.com)[email_info]",
+        "(ibtisam@gmail.com)[email_info]",
+        "oh that is (ibtirz@gmail.com)[email_info]",
+        "oh the email is (miaacca40@gmail.com)[email_info]",
+        "(ibtirz@gmail.com)[email_info]",
+        "(miaacca40@gmail.com)[email_info]",
+        "(ibtisam@sharksolutions.info)[email_info]",
+        "(ibtisam@primaxjm.com)[email_info]",
+        "It's (ibtirz@gmail.com)[email_info]",
+        "It's (miaacca40@gmail.com)[email_info]",
+        "It's (ibtisam@primaxjm.com)[email_info]"
+      ]
+    },
+	
+    "rating": 
+    {
+      "open_set": false,
+      "values": [
+        {
+          "value": "0",
+          "synonyms": ["0", "zero", "horrible", "worst ever"]
+        },
+        {
+          "value": "1",
+          "synonyms": ["1", "one", "very bad"]
+        },
+        {
+          "value": "2",
+          "synonyms": ["2", "two", "bad"]
+        },
+        {
+          "value": "3",
+          "synonyms": ["3", "three", "not good"]
+        },
+        {
+          "value": "4",
+          "synonyms": ["4", "four", "inadequate"]
+        },
+        {
+          "value": "5",
+          "synonyms": ["5", "five", "bearable"]
+        },
+        {
+          "value": "6",
+          "synonyms": ["6", "six", "average"]
+        },
+        {
+          "value": "7",
+          "synonyms": ["7", "seven",  "pretty good", "okay"]
+        },
+        {
+          "value": "8",
+          "synonyms": ["8", "eight", "good"]
+        },
+        {
+          "value": "9",
+          "synonyms": ["9", "nine", "very good"]
+        },
+        {
+          "value": "10",
+          "synonyms": ["10", "ten", "amazing", "incrdible", "perfect", "awesome"]
+        }
+      ],
+      "includes": [
+        "I would give it a (4)[rating]",
+        "I would give it a (7)[rating]",
+        "I would give it a (8)[rating]",
+        "I would give it a (9)[rating]",
+        "I would give it a (10)[rating]",
+        "(4)[rating]",
+        "(5)[rating]",
+        "(7)[rating]",
+        "(8)[rating]",
+        "(10)[rating]",
+        "I'll give you a (6)[rating]",
+        "I'll give you a (7)[rating]",
+        "I'll give you a (8)[rating]",
+        "I'll give you a (9)[rating]",
+        "I'll give you a (10)[rating]",
+        "(0)[rating]",
+        "(7)[rating]",
+        "(8)[rating]",
+        "(9)[rating]",
+        "(10)[rating]"
+      ]
+    }
+  }
+}
